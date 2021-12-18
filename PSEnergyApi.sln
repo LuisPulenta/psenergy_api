@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSEnergyApi.Common", "PSEnergyApi.Common\PSEnergyApi.Common.csproj", "{048FECA1-BE0C-467E-9C57-72B74EDCB30E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSEnergyApi.Web", "PSEnergyApi.Api\PSEnergyApi.Web.csproj", "{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3395847-AA01-4AF0-A27A-AE5E734AF0D1}
+	EndGlobalSection
+EndGlobal
