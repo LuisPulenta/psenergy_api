@@ -10,7 +10,7 @@ namespace PSEnergy.Web.Data
         }
         public DbSet<Usuario> SubContratistasUsrWebs { get; set; }
         public DbSet<Area> Areas { get; set; }
-        public DbSet<Yacimiento> Bateria { get; set; }
+        public DbSet<Yacimiento> Yacimientos { get; set; }
         public DbSet<Bateria> Baterias { get; set; }
         public DbSet<Pozo> Pozos { get; set; }
     }

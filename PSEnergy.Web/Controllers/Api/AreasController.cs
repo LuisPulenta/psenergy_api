@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PSEnergy.Web.Data;
 using PSEnergy.Web.Data.Entities;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PSEnergy.Web.Controllers.API
@@ -27,7 +28,8 @@ namespace PSEnergy.Web.Controllers.API
             }
 
             System.Collections.Generic.List<Area> areas = await _dataContext.Areas
-           .ToListAsync();
+            .OrderBy(o => o.NOMBREAREA)
+            .ToListAsync();
             return Ok(areas);
         }
     }
