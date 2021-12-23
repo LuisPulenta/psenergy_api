@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSEnergyApi.Common", "PSEnergyApi.Common\PSEnergyApi.Common.csproj", "{048FECA1-BE0C-467E-9C57-72B74EDCB30E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSEnergyApi.Web", "PSEnergyApi.Api\PSEnergyApi.Web.csproj", "{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSEnergy.Web", "PSEnergy.Web\PSEnergy.Web.csproj", "{FE2E2AE6-F2D8-4C3E-AE19-70E8013335F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048FECA1-BE0C-467E-9C57-72B74EDCB30E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E70C543F-7475-4CE8-BD2B-EB79E827BB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2E2AE6-F2D8-4C3E-AE19-70E8013335F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2E2AE6-F2D8-4C3E-AE19-70E8013335F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2E2AE6-F2D8-4C3E-AE19-70E8013335F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2E2AE6-F2D8-4C3E-AE19-70E8013335F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
