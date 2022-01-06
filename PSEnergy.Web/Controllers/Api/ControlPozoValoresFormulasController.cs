@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using PSEnergy.Web.Data;
 using PSEnergy.Web.Data.Entities;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PSEnergy.Web.Controllers.API
@@ -18,19 +16,16 @@ namespace PSEnergy.Web.Controllers.API
             _dataContext = dataContext;
         }
 
-        [HttpGet]
-
-        public async Task<IActionResult> GetAreas()
+        [HttpPost]
+        public async Task<ActionResult<ControlPozoValoresFormula>> PostControlPozoValoresFormula(ControlPozoValoresFormula request)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(ModelState);
             }
-
-            System.Collections.Generic.List<ControlPozoValoresFormula> areas = await _dataContext.ControlPozoValoresFormulas
-            .OrderBy(o => o.IDCONTROLFORMULA)
-            .ToListAsync();
-            return Ok(areas);
+            _dataContext.ControlPozoValoresFormulas.Add(request);
+            await _dataContext.SaveChangesAsync();
+            return Ok(request);
         }
     }
 }
