@@ -64,6 +64,7 @@ namespace PSEnergy.Web.Controllers.API
             {
                 return BadRequest(exception.Message);
             }
+
         }
     }
 }
