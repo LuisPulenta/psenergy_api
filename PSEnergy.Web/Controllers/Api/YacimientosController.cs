@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PSEnergy.Web.Data;
+using PSEnergy.Web.Data.Entities;
 using PSEnergy.Web.Models.Request;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,9 +19,25 @@ namespace PSEnergy.Web.Controllers.API
             _dataContext = dataContext;
         }
 
+        [HttpGet]
+
+        public async Task<IActionResult> GetYacimientos()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            System.Collections.Generic.List<Yacimiento> yacimientos = await _dataContext.Yacimientos
+            .OrderBy(o => o.NOMBREYACIMIENTO)
+            .ToListAsync();
+            return Ok(yacimientos);
+        }
+
+
         [HttpPost]
-        [Route("GetYacimientos/{Area}")]
-        public async Task<IActionResult> GetYacimientos(AreaRequest area)
+        [Route("GetYacimientosByArea/{Area}")]
+        public async Task<IActionResult> GetYacimientosByArea(AreaRequest area)
         {
             if (!ModelState.IsValid)
             {
