@@ -33,9 +33,9 @@ namespace PSEnergy.Web.Controllers.API
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsuario(string id, Usuario request)
+        public async Task<IActionResult> PutUsuario(int id, Usuario request)
         {
-            if (id != request.USRLOGIN)
+            if (id != request.IDUser)
             {
                 return BadRequest();
             }
