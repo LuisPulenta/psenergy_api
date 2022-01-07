@@ -27,10 +27,10 @@ namespace PSEnergy.Web.Controllers.Api
                 return BadRequest(ModelState);
             }
 
-            ControlDePozoEMBLLE controlDePozoEMBLLE = await _context.ControlDePozoEMBLLES.FirstOrDefaultAsync(x => (x.Pozo.ToUpper() == request.Pozo) && (x.UserIdInput == request.IdUserImputSoft) && (x.Fecha == request.Fecha));
+            ControlDePozoEMBLLE controlDePozoEMBLLE = await _context.ControlDePozoEMBLLES.FirstOrDefaultAsync(x => (x.Pozo.ToUpper() == request.Pozo) && (x.UserIdInput == request.UserIdInput) && (x.Fecha == request.Fecha));
             if (controlDePozoEMBLLE != null)
             {
-                return BadRequest("Ya existe una medición para este pozo en la misma fecha por el mimo Usuario.");
+                return BadRequest("Existe");
             }
 
             _context.ControlDePozoEMBLLES.Add(request);
