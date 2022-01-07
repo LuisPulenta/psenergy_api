@@ -45,7 +45,7 @@ namespace PSEnergy.Web.Controllers.API
                 return BadRequest(ModelState);
             }
 
-            Usuario usuario = await _dataContext.SubContratistasUsrWebs.FindAsync(request.USRLOGIN);
+            Usuario usuario = await _dataContext.SubContratistasUsrWebs.FindAsync(request.IDUser);
             if (usuario == null)
             {
                 return BadRequest("El usuario no existe.");
