@@ -18,5 +18,6 @@ namespace PSEnergy.Web.Data
         public DbSet<ControlDePozoEMBLLE> ControlDePozoEMBLLES { get; set; }
         public DbSet<ControlPozoValoresFormula> ControlPozoValoresFormulas { get; set; }
         public DbSet<WebSesion> WebSesions { get; set; }
+        public DbSet<ControlDePozoAlarma> ControlDePozoAlarmas { get; set; }
     }
 }
