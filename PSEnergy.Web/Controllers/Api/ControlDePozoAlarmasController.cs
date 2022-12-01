@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PSEnergy.Web.Data;
 using PSEnergy.Web.Data.Entities;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,6 +33,44 @@ namespace PSEnergy.Web.Controllers.API
             .OrderBy(o => o.BATERIA)
             .ToListAsync();
             return Ok(alarmas);
+        }
+
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPozo(int id, ControlDePozoAlarma request)
+        {
+            if (id != request.IDALARMA)
+            {
+                return BadRequest();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            ControlDePozoAlarma alarma = await _dataContext.ControlDePozoAlarmas.FindAsync(request.IDALARMA);
+            if (alarma == null)
+            {
+                return BadRequest("La alarma no existe.");
+            }
+            alarma.IDUSUARIOAPP = request.IDUSUARIOAPP;
+            alarma.FECHAEJECUTADA = request.FECHAEJECUTADA;
+            alarma.NUEVOIDCONTROL = request.NUEVOIDCONTROL;
+            alarma.TAG = 1;
+
+            try
+            {
+                _dataContext.ControlDePozoAlarmas.Update(alarma);
+                await _dataContext.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(exception.Message);
+            }
+
         }
     }
 }
