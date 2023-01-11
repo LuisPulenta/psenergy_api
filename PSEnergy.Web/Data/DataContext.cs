@@ -21,5 +21,6 @@ namespace PSEnergy.Web.Data
         public DbSet<WebSesion> WebSesions { get; set; }
         public DbSet<ControlDePozoAlarma> ControlDePozoAlarmas { get; set; }
         public DbSet<Notification> PSNotificaciones { get; set; }
+        public DbSet<NotificationDestiny> PSDestinatarios { get; set; }
     }
 }
